@@ -1,0 +1,72 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Elliot/Documents/Xilinx/TWO_PLAYER_PONG/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Elliot/Documents/Xilinx/TWO_PLAYER_PONG/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: add3.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" into library work
+Parsing module <Pong>.
+ERROR:HDLCompiler:806 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 182: Syntax error near "'".
+ERROR:HDLCompiler:806 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 186: Syntax error near "'".
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 21: Module <Pong> ignored due to previous errors.
+Parsing module <VGA_Output>.
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 214: Module <VGA_Output> ignored due to previous errors.
+Parsing module <b2seg>.
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 242: Module <b2seg> ignored due to previous errors.
+Parsing module <bcd>.
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 272: Module <bcd> ignored due to previous errors.
+Parsing module <add3>.
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 283: Module <add3> ignored due to previous errors.
+Parsing module <BG_Player>.
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 296: Module <BG_Player> ignored due to previous errors.
+Parsing module <divide_by12>.
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 337: Module <divide_by12> ignored due to previous errors.
+Parsing module <music_ROM>.
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 370: Module <music_ROM> ignored due to previous errors.
+Parsing module <control>.
+ERROR:HDLCompiler:598 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 625: Module <control> ignored due to previous errors.
+ERROR:HDLCompiler:806 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 661: Syntax error near "7".
+Verilog file C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v ignored due to errors
+--> 
+
+Total memory usage is 185644 kilobytes
+
+Number of errors   :   12 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

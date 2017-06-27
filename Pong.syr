@@ -1,0 +1,898 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Pong.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Pong.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Pong"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Pong
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" into library work
+Parsing module <Pong>.
+Parsing module <VGA_Output>.
+Parsing module <b2seg>.
+Parsing module <bcd>.
+Parsing module <add3>.
+Parsing module <BG_Player>.
+Parsing module <divide_by12>.
+Parsing module <music_ROM>.
+Parsing module <control>.
+Parsing module <segments>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Pong>.
+
+Elaborating module <control>.
+WARNING:HDLCompiler:91 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 631: Signal <playerU1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 634: Signal <playerD1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 641: Signal <playerU2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 644: Signal <playerD2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <segments>.
+WARNING:HDLCompiler:604 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 75: Module instantiation should have an instance name
+
+Elaborating module <VGA_Output>.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 214: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 215: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 223: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 228: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 93: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 95: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 107: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 109: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 118: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 119: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 166: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 173: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <BG_Player>.
+
+Elaborating module <music_ROM>.
+
+Elaborating module <divide_by12>.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 191: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 192: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 193: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v" Line 64: Net <CLOCK50> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Pong>.
+    Related source file is "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v".
+WARNING:Xst:653 - Signal <CLOCK50> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <counter>.
+    Found 1-bit register for signal <clk5>.
+    Found 10-bit register for signal <paddleY>.
+    Found 10-bit register for signal <paddleY1>.
+    Found 10-bit register for signal <ballX>.
+    Found 10-bit register for signal <ballY>.
+    Found 1-bit register for signal <v<1>>.
+    Found 1-bit register for signal <bounceY>.
+    Found 1-bit register for signal <v<0>>.
+    Found 1-bit register for signal <bounceX>.
+    Found 1-bit register for signal <miss>.
+    Found 4-bit register for signal <score1>.
+    Found 4-bit register for signal <score>.
+    Found 1-bit register for signal <clk>.
+    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_8_OUT> created at line 82.
+    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT> created at line 82.
+    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_50_OUT> created at line 118.
+    Found 11-bit subtractor for signal <GND_1_o_GND_1_o_sub_53_OUT> created at line 119.
+    Found 32-bit adder for signal <counter[31]_GND_1_o_add_3_OUT> created at line 58.
+    Found 32-bit adder for signal <GND_1_o_GND_1_o_add_13_OUT> created at line 82.
+    Found 11-bit adder for signal <n0227> created at line 87.
+    Found 10-bit adder for signal <paddleY[9]_GND_1_o_add_25_OUT> created at line 93.
+    Found 11-bit adder for signal <n0231> created at line 101.
+    Found 10-bit adder for signal <paddleY1[9]_GND_1_o_add_41_OUT> created at line 107.
+    Found 11-bit adder for signal <n0278[10:0]> created at line 118.
+    Found 11-bit adder for signal <n0280[10:0]> created at line 119.
+    Found 11-bit adder for signal <n0242> created at line 156.
+    Found 4-bit adder for signal <score1[3]_GND_1_o_add_76_OUT> created at line 166.
+    Found 4-bit adder for signal <score[3]_GND_1_o_add_78_OUT> created at line 173.
+    Found 10-bit subtractor for signal <GND_1_o_GND_1_o_sub_28_OUT<9:0>> created at line 95.
+    Found 10-bit subtractor for signal <GND_1_o_GND_1_o_sub_44_OUT<9:0>> created at line 109.
+    Found 32x32-bit multiplier for signal <n0170> created at line 82.
+    Found 32x32-bit multiplier for signal <n0172> created at line 82.
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_15_o> created at line 82
+    Found 10-bit comparator greater for signal <paddleY[9]_y[9]_LessThan_17_o> created at line 87
+    Found 11-bit comparator greater for signal <GND_1_o_BUS_0003_LessThan_19_o> created at line 87
+    Found 10-bit comparator greater for signal <GND_1_o_x[9]_LessThan_20_o> created at line 87
+    Found 10-bit comparator greater for signal <x[9]_GND_1_o_LessThan_21_o> created at line 87
+    Found 10-bit comparator greater for signal <paddleY[9]_GND_1_o_LessThan_25_o> created at line 92
+    Found 10-bit comparator greater for signal <paddleY1[9]_y[9]_LessThan_33_o> created at line 101
+    Found 11-bit comparator greater for signal <GND_1_o_BUS_0005_LessThan_35_o> created at line 101
+    Found 10-bit comparator greater for signal <PWR_1_o_x[9]_LessThan_36_o> created at line 101
+    Found 10-bit comparator greater for signal <x[9]_PWR_1_o_LessThan_37_o> created at line 101
+    Found 10-bit comparator greater for signal <paddleY1[9]_GND_1_o_LessThan_41_o> created at line 106
+    Found 10-bit comparator lessequal for signal <n0075> created at line 139
+    Found 10-bit comparator greater for signal <ballX[9]_GND_1_o_LessThan_66_o> created at line 151
+    Found 11-bit comparator greater for signal <GND_1_o_BUS_0009_LessThan_68_o> created at line 151
+    Found 11-bit comparator greater for signal <GND_1_o_BUS_0010_LessThan_70_o> created at line 151
+    Found 10-bit comparator greater for signal <PWR_1_o_ballX[9]_LessThan_71_o> created at line 156
+    Found 11-bit comparator greater for signal <GND_1_o_BUS_0011_LessThan_73_o> created at line 156
+    Found 11-bit comparator greater for signal <GND_1_o_BUS_0012_LessThan_75_o> created at line 156
+    Found 10-bit comparator greater for signal <PWR_1_o_ballX[9]_LessThan_76_o> created at line 161
+    Found 10-bit comparator greater for signal <ballX[9]_GND_1_o_LessThan_78_o> created at line 168
+    Found 10-bit comparator greater for signal <GND_1_o_x[9]_LessThan_89_o> created at line 185
+    Found 10-bit comparator greater for signal <x[9]_GND_1_o_LessThan_90_o> created at line 185
+    Found 10-bit comparator greater for signal <GND_1_o_y[9]_LessThan_91_o> created at line 185
+    Found 10-bit comparator greater for signal <y[9]_GND_1_o_LessThan_92_o> created at line 185
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred  15 Adder/Subtractor(s).
+	inferred  87 D-type flip-flop(s).
+	inferred  24 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <Pong> synthesized.
+
+Synthesizing Unit <control>.
+    Related source file is "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <control> synthesized.
+
+Synthesizing Unit <segments>.
+    Related source file is "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v".
+    Found 7-bit register for signal <outP2>.
+    Found 7-bit register for signal <outP1>.
+    Found 16x7-bit Read Only RAM for signal <scoreP1[3]_GND_3_o_wide_mux_1_OUT>
+    Found 16x7-bit Read Only RAM for signal <scoreP2[3]_GND_3_o_wide_mux_2_OUT>
+    Summary:
+	inferred   2 RAM(s).
+	inferred  14 D-type flip-flop(s).
+Unit <segments> synthesized.
+
+Synthesizing Unit <VGA_Output>.
+    Related source file is "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v".
+    Found 10-bit register for signal <y>.
+    Found 10-bit register for signal <x>.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_5_OUT> created at line 214.
+    Found 11-bit subtractor for signal <GND_4_o_GND_4_o_sub_7_OUT> created at line 215.
+    Found 10-bit adder for signal <x[9]_GND_4_o_add_11_OUT> created at line 223.
+    Found 10-bit adder for signal <y[9]_GND_4_o_add_15_OUT> created at line 228.
+    Found 10-bit comparator greater for signal <GND_4_o_y[9]_LessThan_1_o> created at line 213
+    Found 10-bit comparator greater for signal <y[9]_PWR_4_o_LessThan_2_o> created at line 213
+    Found 10-bit comparator greater for signal <GND_4_o_x[9]_LessThan_3_o> created at line 213
+    Found 10-bit comparator greater for signal <x[9]_PWR_4_o_LessThan_4_o> created at line 213
+    Found 10-bit comparator greater for signal <GND_4_o_x[9]_LessThan_20_o> created at line 230
+    Found 10-bit comparator greater for signal <x[9]_GND_4_o_LessThan_21_o> created at line 230
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <VGA_Output> synthesized.
+
+Synthesizing Unit <BG_Player>.
+    Related source file is "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v".
+    Found 9-bit register for signal <counter_note>.
+    Found 8-bit register for signal <counter_octave>.
+    Found 1-bit register for signal <speaker>.
+    Found 31-bit register for signal <tone>.
+    Found 9-bit subtractor for signal <counter_note[8]_GND_6_o_sub_7_OUT> created at line 323.
+    Found 8-bit subtractor for signal <counter_octave[7]_GND_6_o_sub_14_OUT> created at line 324.
+    Found 31-bit adder for signal <tone[30]_GND_6_o_add_1_OUT> created at line 294.
+    Found 8-bit shifter logical right for signal <PWR_6_o_octave[2]_shift_right_12_OUT> created at line 324
+    Found 16x9-bit Read Only RAM for signal <clkdivider>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <BG_Player> synthesized.
+
+Synthesizing Unit <music_ROM>.
+    Related source file is "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v".
+    Found 8-bit register for signal <note>.
+    Found 256x8-bit Read Only RAM for signal <address[7]_GND_7_o_wide_mux_1_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <music_ROM> synthesized.
+
+Synthesizing Unit <divide_by12>.
+    Related source file is "C:\Users\Elliot\Documents\Xilinx\TWO_PLAYER_PONG\Pong.v".
+    Found 16x5-bit Read Only RAM for signal <_n0029>
+    Summary:
+	inferred   1 RAM(s).
+Unit <divide_by12> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x5-bit single-port Read Only RAM                    : 1
+ 16x7-bit single-port Read Only RAM                    : 2
+ 16x9-bit single-port Read Only RAM                    : 1
+ 256x8-bit single-port Read Only RAM                   : 1
+# Multipliers                                          : 2
+ 32x32-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 22
+ 10-bit adder                                          : 2
+ 10-bit addsub                                         : 2
+ 11-bit adder                                          : 5
+ 11-bit subtractor                                     : 6
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 23
+ 1-bit register                                        : 8
+ 10-bit register                                       : 6
+ 31-bit register                                       : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 2
+ 7-bit register                                        : 2
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 30
+ 10-bit comparator greater                             : 22
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator greater                             : 6
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 7
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 8-bit shifter logical right                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <BG_Player>.
+The following registers are absorbed into counter <counter_note>: 1 register on signal <counter_note>.
+The following registers are absorbed into counter <tone>: 1 register on signal <tone>.
+The following registers are absorbed into counter <counter_octave>: 1 register on signal <counter_octave>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_clkdivider> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <note>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <clkdivider>    |          |
+    -----------------------------------------------------------------------
+Unit <BG_Player> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Pong>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <paddleY>: 1 register on signal <paddleY>.
+The following registers are absorbed into counter <paddleY1>: 1 register on signal <paddleY1>.
+The following registers are absorbed into counter <score1>: 1 register on signal <score1>.
+The following registers are absorbed into counter <score>: 1 register on signal <score>.
+	Multiplier <Mmult_n0170> in block <Pong> and adder/subtractor <Madd_GND_1_o_GND_1_o_add_13_OUT> in block <Pong> are combined into a MAC<Maddsub_n0170>.
+Unit <Pong> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_Output>.
+The following registers are absorbed into counter <x>: 1 register on signal <x>.
+The following registers are absorbed into counter <y>: 1 register on signal <y>.
+Unit <VGA_Output> synthesized (advanced).
+
+Synthesizing (advanced) Unit <music_ROM>.
+INFO:Xst:3226 - The RAM <Mram_address[7]_GND_7_o_wide_mux_1_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <note>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <note>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <music_ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <segments>.
+INFO:Xst:3231 - The small RAM <Mram_scoreP1[3]_GND_3_o_wide_mux_1_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <scoreP1>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_scoreP2[3]_GND_3_o_wide_mux_2_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <scoreP2>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <segments> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x5-bit single-port distributed Read Only RAM        : 1
+ 16x7-bit single-port distributed Read Only RAM        : 2
+ 16x9-bit single-port distributed Read Only RAM        : 1
+ 256x8-bit single-port block Read Only RAM             : 1
+# MACs                                                 : 1
+ 11x11-to-32-bit MAC                                   : 1
+# Multipliers                                          : 1
+ 11x11-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 11
+ 11-bit adder                                          : 5
+ 11-bit subtractor                                     : 6
+# Counters                                             : 10
+ 10-bit up counter                                     : 2
+ 10-bit updown counter                                 : 2
+ 31-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+ 8-bit down counter                                    : 1
+ 9-bit down counter                                    : 1
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+# Comparators                                          : 30
+ 10-bit comparator greater                             : 22
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator greater                             : 6
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 4
+ 32-bit 2-to-1 multiplexer                             : 7
+# Logic shifters                                       : 1
+ 8-bit shifter logical right                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <bgp/tone_30> of sequential type is unconnected in block <Pong>.
+
+Optimizing unit <Pong> ...
+
+Optimizing unit <segments> ...
+WARNING:Xst:1293 - FF/Latch <paddleY1_9> has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <paddleY_9> has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_31> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_30> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_29> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_28> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_27> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_26> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_25> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_24> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_23> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_22> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_21> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_20> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_19> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_18> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_17> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_16> (without init value) has a constant value of 0 in block <Pong>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <bgp/tone_0> in Unit <Pong> is equivalent to the following FF/Latch, which will be removed : <_i000007/x_0> 
+INFO:Xst:2261 - The FF/Latch <bgp/tone_1> in Unit <Pong> is equivalent to the following FF/Latch, which will be removed : <_i000007/x_1> 
+INFO:Xst:2261 - The FF/Latch <bgp/tone_2> in Unit <Pong> is equivalent to the following FF/Latch, which will be removed : <_i000007/x_2> 
+INFO:Xst:2261 - The FF/Latch <bgp/tone_3> in Unit <Pong> is equivalent to the following FF/Latch, which will be removed : <_i000007/x_3> 
+INFO:Xst:2261 - The FF/Latch <bgp/tone_4> in Unit <Pong> is equivalent to the following FF/Latch, which will be removed : <_i000007/x_4> 
+INFO:Xst:2261 - The FF/Latch <ballY_0> in Unit <Pong> is equivalent to the following FF/Latch, which will be removed : <ballX_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Pong, actual ratio is 9.
+FlipFlop ballY_0 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 147
+ Flip-Flops                                            : 147
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Pong.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 712
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 61
+#      LUT2                        : 35
+#      LUT3                        : 49
+#      LUT4                        : 114
+#      LUT5                        : 56
+#      LUT6                        : 112
+#      MUXCY                       : 154
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 118
+# FlipFlops/Latches                : 147
+#      FD                          : 57
+#      FDE                         : 35
+#      FDR                         : 23
+#      FDRE                        : 25
+#      FDS                         : 1
+#      FDSE                        : 6
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 43
+#      IBUF                        : 14
+#      OBUF                        : 29
+# DSPs                             : 2
+#      DSP48A1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             133  out of  11440     1%  
+ Number of Slice LUTs:                  437  out of   5720     7%  
+    Number used as Logic:               437  out of   5720     7%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    441
+   Number with an unused Flip Flop:     308  out of    441    69%  
+   Number with an unused LUT:             4  out of    441     0%  
+   Number of fully used LUT-FF pairs:   129  out of    441    29%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          72
+ Number of bonded IOBs:                  44  out of    102    43%  
+    IOB Flip Flops/Latches:              14
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of DSP48A1s:                      2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLOCK_50                           | BUFGP                  | 17    |
+clk                                | BUFG                   | 81    |
+clk5                               | BUFG                   | 50    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.388ns (Maximum Frequency: 156.553MHz)
+   Minimum input arrival time before clock: 4.356ns
+   Maximum output required time after clock: 22.493ns
+   Maximum combinational path delay: 5.259ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK_50'
+  Clock period: 3.100ns (frequency: 322.544MHz)
+  Total number of paths / destination ports: 6 / 5
+-------------------------------------------------------------------------
+Delay:               3.100ns (Levels of Logic = 2)
+  Source:            bounceY (FF)
+  Destination:       bounceY (FF)
+  Source Clock:      CLOCK_50 rising
+  Destination Clock: CLOCK_50 rising
+
+  Data Path: bounceY to bounceY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              2   0.447   0.617  bounceY (bounceY)
+     LUT6:I5->O            1   0.205   0.580  GND_1_o_bounceY_AND_1039_o_SW0 (N21)
+     LUT6:I5->O            2   0.205   0.616  GND_1_o_bounceY_AND_1039_o (GND_1_o_bounceY_AND_1039_o)
+     FDS:S                     0.430          bounceY
+    ----------------------------------------
+    Total                      3.100ns (1.287ns logic, 1.813ns route)
+                                       (41.5% logic, 58.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.077ns (frequency: 196.978MHz)
+  Total number of paths / destination ports: 2721 / 139
+-------------------------------------------------------------------------
+Delay:               5.077ns (Levels of Logic = 2)
+  Source:            bgp/get_fullnote/Mram_address[7]_GND_7_o_wide_mux_1_OUT (RAM)
+  Destination:       bgp/speaker (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: bgp/get_fullnote/Mram_address[7]_GND_7_o_wide_mux_1_OUT to bgp/speaker
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKAWRCLK->DOADO4   19   1.650   1.436  bgp/get_fullnote/Mram_address[7]_GND_7_o_wide_mux_1_OUT (bgp/fullnote<4>)
+     LUT6:I0->O            1   0.203   0.684  bgp/GND_6_o_GND_6_o_AND_1054_o1 (bgp/GND_6_o_GND_6_o_AND_1054_o1)
+     LUT5:I3->O            1   0.203   0.579  bgp/GND_6_o_GND_6_o_AND_1054_o3 (bgp/GND_6_o_GND_6_o_AND_1054_o)
+     FDE:CE                    0.322          bgp/speaker
+    ----------------------------------------
+    Total                      5.077ns (2.378ns logic, 2.699ns route)
+                                       (46.8% logic, 53.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk5'
+  Clock period: 6.388ns (frequency: 156.553MHz)
+  Total number of paths / destination ports: 7700 / 117
+-------------------------------------------------------------------------
+Delay:               6.388ns (Levels of Logic = 6)
+  Source:            paddleY1_1 (FF)
+  Destination:       score1_0 (FF)
+  Source Clock:      clk5 rising
+  Destination Clock: clk5 rising
+
+  Data Path: paddleY1_1 to score1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             15   0.447   1.229  paddleY1_1 (paddleY1_1)
+     LUT6:I2->O            3   0.203   0.651  Madd_n0231_cy<6>11 (Madd_n0231_cy<6>)
+     LUT3:I2->O            3   0.205   0.995  Madd_n0231_xor<8>11 (n0231<8>)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_GND_1_o_BUS_0012_LessThan_75_o_lut<4> (Mcompar_GND_1_o_BUS_0012_LessThan_75_o_lut<4>)
+     MUXCY:S->O           10   0.366   0.961  Mcompar_GND_1_o_BUS_0012_LessThan_75_o_cy<4> (Mcompar_GND_1_o_BUS_0012_LessThan_75_o_cy<4>)
+     LUT6:I4->O            2   0.203   0.617  PWR_1_o_GND_1_o_AND_1046_o (PWR_1_o_GND_1_o_AND_1046_o)
+     LUT5:I4->O            1   0.205   0.000  score1_1_rstpot (score1_1_rstpot)
+     FD:D                      0.102          score1_1
+    ----------------------------------------
+    Total                      6.388ns (1.934ns logic, 4.454ns route)
+                                       (30.3% logic, 69.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk5'
+  Total number of paths / destination ports: 201 / 57
+-------------------------------------------------------------------------
+Offset:              4.356ns (Levels of Logic = 3)
+  Source:            playerUp1 (PAD)
+  Destination:       paddleY_0 (FF)
+  Destination Clock: clk5 rising
+
+  Data Path: playerUp1 to paddleY_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.995  playerUp1_IBUF (playerUp1_IBUF)
+     LUT6:I1->O            1   0.203   0.580  _n0310_inv3 (_n0310_inv3)
+     LUT6:I5->O            9   0.205   0.829  _n0310_inv5 (_n0310_inv)
+     FDE:CE                    0.322          paddleY_0
+    ----------------------------------------
+    Total                      4.356ns (1.952ns logic, 2.404ns route)
+                                       (44.8% logic, 55.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 544270683 / 15
+-------------------------------------------------------------------------
+Offset:              22.493ns (Levels of Logic = 23)
+  Source:            _i000007/y_2 (FF)
+  Destination:       VGA_R<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: _i000007/y_2 to VGA_R<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            32   0.447   1.396  _i000007/y_2 (_i000007/y_2)
+     LUT3:I1->O            2   0.203   0.864  _i000007/oVGA_VS11 (_i000007/oVGA_VS1)
+     LUT6:I2->O           21   0.203   1.361  _i000007/oActive3 (_i000007/oActive2)
+     LUT5:I1->O           30   0.203   1.628  _i000007/oActive4 (display)
+     LUT6:I0->O            1   0.203   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_lut<4> (Msub_GND_1_o_GND_1_o_sub_11_OUT_lut<4>)
+     MUXCY:S->O            1   0.172   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<4> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<5> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<6> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<7> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<8> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<9> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<9>)
+     XORCY:CI->O          16   0.180   1.004  Msub_GND_1_o_GND_1_o_sub_11_OUT_xor<10> (GND_1_o_GND_1_o_sub_11_OUT<10>)
+     DSP48A1:A10->PCOUT47    1   4.469   0.000  Mmult_n0172 (Mmult_n0172_PCOUT_to_Maddsub_n0170_PCIN_47)
+     DSP48A1:PCIN47->P3    2   2.264   0.961  Maddsub_n0170 (GND_1_o_GND_1_o_add_13_OUT<3>)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_lut<0> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<0> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<1> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<2> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<3> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<3>)
+     MUXCY:CI->O           1   0.213   0.580  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<4>)
+     LUT6:I5->O            1   0.205   0.580  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<5>)
+     LUT6:I5->O           10   0.205   1.201  VGA_G<0>112 (VGA_G<0>1)
+     LUT6:I1->O            3   0.203   0.650  VGA_G<0>2 (VGA_G_0_OBUF)
+     OBUF:I->O                 2.571          VGA_R_0_OBUF (VGA_R<0>)
+    ----------------------------------------
+    Total                     22.493ns (12.268ns logic, 10.225ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk5'
+  Total number of paths / destination ports: 8575224 / 12
+-------------------------------------------------------------------------
+Offset:              17.948ns (Levels of Logic = 24)
+  Source:            ballY_0 (FF)
+  Destination:       VGA_R<0> (PAD)
+  Source Clock:      clk5 rising
+
+  Data Path: ballY_0 to VGA_R<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            28   0.447   1.235  ballY_0 (ballY_0)
+     LUT3:I2->O            1   0.205   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_lut<0> (Msub_GND_1_o_GND_1_o_sub_11_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<0> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<1> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<2> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<3> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<4> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<5> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<6> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<7> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<8> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<9> (Msub_GND_1_o_GND_1_o_sub_11_OUT_cy<9>)
+     XORCY:CI->O          16   0.180   1.004  Msub_GND_1_o_GND_1_o_sub_11_OUT_xor<10> (GND_1_o_GND_1_o_sub_11_OUT<10>)
+     DSP48A1:A10->PCOUT47    1   4.469   0.000  Mmult_n0172 (Mmult_n0172_PCOUT_to_Maddsub_n0170_PCIN_47)
+     DSP48A1:PCIN47->P3    2   2.264   0.961  Maddsub_n0170 (GND_1_o_GND_1_o_add_13_OUT<3>)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_lut<0> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<0> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<1> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<2> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<3> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<3>)
+     MUXCY:CI->O           1   0.213   0.580  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<4> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<4>)
+     LUT6:I5->O            1   0.205   0.580  Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<5> (Mcompar_GND_1_o_GND_1_o_LessThan_15_o_cy<5>)
+     LUT6:I5->O           10   0.205   1.201  VGA_G<0>112 (VGA_G<0>1)
+     LUT6:I1->O            3   0.203   0.650  VGA_G<0>2 (VGA_G_0_OBUF)
+     OBUF:I->O                 2.571          VGA_R_0_OBUF (VGA_R<0>)
+    ----------------------------------------
+    Total                     17.948ns (11.737ns logic, 6.211ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK_50'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            segm/outP1_6 (FF)
+  Destination:       out1<0> (PAD)
+  Source Clock:      CLOCK_50 rising
+
+  Data Path: segm/outP1_6 to out1<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  segm/outP1_6 (segm/outP1_6)
+     OBUF:I->O                 2.571          out1_0_OBUF (out1<0>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Delay:               5.259ns (Levels of Logic = 3)
+  Source:            SW<8> (PAD)
+  Destination:       VGA_R<3> (PAD)
+
+  Data Path: SW<8> to VGA_R<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.684  SW_8_IBUF (SW_8_IBUF)
+     LUT3:I1->O            1   0.203   0.579  Mmux_n014841 (VGA_R_3_OBUF)
+     OBUF:I->O                 2.571          VGA_R_3_OBUF (VGA_R<3>)
+    ----------------------------------------
+    Total                      5.259ns (3.996ns logic, 1.263ns route)
+                                       (76.0% logic, 24.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK_50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_50       |    3.100|         |         |         |
+clk5           |    3.939|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.077|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk5
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_50       |    2.764|         |         |         |
+clk5           |    6.388|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.34 secs
+ 
+--> 
+
+Total memory usage is 269172 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   42 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

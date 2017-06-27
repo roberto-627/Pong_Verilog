@@ -1,0 +1,20 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Pong.ngc ...
+WARNING:NetListWriters:298 - No output is written to Pong.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Madd_n0280[10:0]_cy<5 : 3> on block Pong
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Msub_GND_1_o_GND_1_o_sub_53_OUT_cy<5 :
+   3> on block Pong is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_n0242_cy<9 : 1> on block Pong is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_n0227_cy<9 : 6> on block Pong is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file Pong.edif ...
+ngc2edif: Total memory usage is 84624 kilobytes
+
